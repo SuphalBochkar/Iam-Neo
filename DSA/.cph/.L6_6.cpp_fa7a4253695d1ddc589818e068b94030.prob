@@ -1,0 +1,1 @@
+{"name":"Local: L6_6","url":"a:\\3 GitHub Desk\\2 Iam Neo\\DSA\\L6_6.cpp","tests":[{"id":1693154822499,"input":"10\n25 36 96 58 74 14 35 15 75 95","output":"96 14 75 15 74 36 35 58 25 95"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"a:\\3 GitHub Desk\\2 Iam Neo\\DSA\\L6_6.cpp","group":"local","local":true}
