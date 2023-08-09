@@ -1,0 +1,34 @@
+Which of the following pseudo-code snippet correctly reverses a Grounded Header Linked List?
+Note: This is a sample question asked in TCS recruitment.
+
+1) searchValue(value):
+  temp = header.next
+  while temp is not NULL:
+    if temp.data = value:
+      return True
+    temp = temp.next
+  return False
+
+2) searchValue(value):
+  temp = header
+  while temp.next is not NULL:
+    if temp.data = value:
+      return True
+    temp = temp.next
+  return False
+
+3) searchValue(value):
+  temp = header.next
+  while temp.next is not NULL:
+    if temp.data = value:
+      return True
+    temp = temp.next
+  return False
+
+4) searchValue(value):
+  temp = header
+  while temp is not NULL:
+    if temp.data = value:
+      return True
+    temp = temp.next
+  return False
