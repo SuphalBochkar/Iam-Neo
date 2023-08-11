@@ -57,6 +57,15 @@ int main()
 #include <bits/stdc++.h>
 using namespace std;
 
+void middle_insert(vector<int> &arr, int q, int k)
+{
+    if (q >= 1 && q <= arr.size() + 1)
+    {
+        auto it = arr.begin() + (q - 1);
+        arr.emplace(it, k);
+    }
+}
+
 int main()
 {
     int n;
@@ -76,5 +85,23 @@ int main()
     {
         cout << arr[i] << " ";
     }
+
+    cout << endl;
+
+    if (index >= 1 && index <= n + 1)
+    {
+        middle_insert(arr, index, key);
+
+        cout << "Updated array: ";
+        for (int i = 0; i < arr.size(); i++)
+        {
+            cout << arr[i] << " ";
+        }
+    }
+    else
+    {
+        cout << "Invalid position!";
+    }
+
     return 0;
 }
