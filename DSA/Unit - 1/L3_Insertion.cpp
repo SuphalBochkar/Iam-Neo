@@ -29,6 +29,42 @@ int main()
 
     int size = n;
 
+    while (true)
+    {
+        cout << endl;
+        int choice;
+        cout << "Choose an insertion option:" << endl;
+        cout << "1. Insert at the start" << endl;
+        cout << "2. Insert at the end" << endl;
+        cout << "3. Insert at a specific position" << endl;
+        cout << "4. Exit" << endl;
+        cout << "Enter your choice (1/2/3/4): ";
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            cout << "Enter Key: ";
+            cin >> key;
+            start_insert(num, size, key);
+            break;
+        case 2:
+            cout << "Enter Key: ";
+            cin >> key;
+            end_insert(num, size, key);
+            break;
+        case 3:
+            cout << "Enter Key: ";
+            cin >> key;
+            middle_insert(num, size, key);
+            break;
+        case 4:
+            cout << "Exiting the program..." << endl;
+            return 0;
+        default:
+            cout << "Invalid choice!" << endl;
+        }
+
         cout << "Updated array:" << endl;
         for (int i = 0; i < size; i++)
         {
