@@ -65,5 +65,20 @@ int main()
         default:
             cout << "Invalid choice!" << endl;
         }
+
+        cout << "Updated array:" << endl;
+        for (int i = 0; i < size; i++)
+        {
+            cout << num[i] << " ";
+        }
+        cout << endl;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << num[i] << " ";
+    }
+    cout << endl;
+
     return 0;
 }
