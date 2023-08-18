@@ -30,5 +30,40 @@ int main()
 
     int size = n;
 
+    while (true)
+    {
+        cout << endl;
+        int choice;
+        cout << "Choose an Deletion option:" << endl;
+        cout << "1. Delete at the start" << endl;
+        cout << "2. Delete at the end" << endl;
+        cout << "3. Delete a specific position" << endl;
+        cout << "4. Exit" << endl;
+        cout << "Enter your choice (1/2/3/4): ";
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            cout << "Enter Key: ";
+            cin >> key;
+            start_delete(num, size);
+            break;
+        case 2:
+            cout << "Enter Key: ";
+            cin >> key;
+            end_delete(num, size);
+            break;
+        case 3:
+            cout << "Enter Key: ";
+            cin >> key;
+            middle_delete(num, size);
+            break;
+        case 4:
+            cout << "Exiting the program..." << endl;
+            return 0;
+        default:
+            cout << "Invalid choice!" << endl;
+        }
     return 0;
 }
