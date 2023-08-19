@@ -82,3 +82,34 @@ int main()
 
     return 0;
 }
+void middle_delete(int num[], int &size)
+{
+    int q;
+    cout << "Enter the position to delete: ";
+    cin >> q;
+
+    if (q >= 1 && q <= size)
+    {
+        for (int i = q - 1; i < size - 1; i++)
+        {
+            num[i] = num[i + 1];
+        }
+        size--;
+    }
+    else
+    {
+        cout << "Invalid position for deletion!" << endl;
+    }
+}
+void end_delete(int num[], int &size)
+{
+    size--;
+}
+void start_delete(int num[], int &size)
+{
+    for (int i = 0; i < size - 1; i++)
+    {
+        num[i] = num[i + 1];
+    }
+    size--;
+}
