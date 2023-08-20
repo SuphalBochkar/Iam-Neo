@@ -52,3 +52,77 @@ int main()
     return 0;
 }
 
+void middle_delete(int num[], int &size)
+{
+    int q = size / 2;
+    if (q >= 0 && q < size)
+    {
+        for (int i = q; i < size - 1; i++)
+        {
+            num[i] = num[i + 1];
+        }
+        size--;
+    }
+    else
+    {
+        cout << "Invalid position for deletion!" << endl;
+    }
+}
+
+void end_delete(int num[], int &size)
+{
+    size--;
+}
+
+void start_delete(int num[], int &size)
+{
+    for (int i = 0; i < size - 1; i++)
+    {
+        num[i] = num[i + 1];
+    }
+    size--;
+}
+
+void start_insert(int num[], int &size, int key)
+{
+    for (int i = size; i > 0; i--)
+    {
+        num[i] = num[i - 1];
+    }
+    num[0] = key;
+    size++;
+}
+
+void end_insert(int num[], int &size, int key)
+{
+    num[size] = key;
+    size++;
+}
+
+void middle_insert(int num[], int &size, int key)
+{
+    int q = size / 2;
+    if (q >= 0 && q <= size)
+    {
+        for (int i = size; i > q; i--)
+        {
+            num[i] = num[i - 1];
+        }
+        num[q] = key;
+        size++;
+    }
+    else
+    {
+        cout << "Invalid position to insert!" << endl;
+    }
+}
+
+void printArray(int num[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << num[i] << " ";
+    }
+    cout << endl;
+}
+
