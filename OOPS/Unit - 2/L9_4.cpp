@@ -38,3 +38,23 @@
 //     return 0;
 // }
 
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+    const char *expression = "(2 + 3) * 4";
+    bool isValid = isValidMathExpression(expression);
+
+    if (isValid)
+    {
+        cout << "Valid mathematical expression." << endl;
+    }
+    else
+    {
+        cout << "Invalid mathematical expression." << endl;
+    }
+
+    return 0;
+}
