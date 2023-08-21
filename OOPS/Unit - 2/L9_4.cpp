@@ -41,6 +41,30 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+bool isValidMathExpression(const char *expression)
+{
+    stack<char> parenthesesStack;
+
+    for (int i = 0; i < strlen(expression); i++)
+    {
+        char c = expression[i];
+
+        if (c == '(')
+        {
+            parenthesesStack.push(c);
+        }
+        else if (c == ')')
+        {
+            if (parenthesesStack.empty() || parenthesesStack.top() != '(')
+            {
+                return false;
+            }
+            parenthesesStack.pop();
+        }
+    }
+
+    return parenthesesStack.empty();
+}
 
 int main()
 {
