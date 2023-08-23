@@ -122,3 +122,77 @@ int main()
 
     return 0;
 }
+
+// Insertion functions (same as provided earlier)
+void start_insert(int num[], int &size, int key)
+{
+    for (int i = size; i > 0; i--)
+    {
+        num[i] = num[i - 1];
+    }
+
+    num[0] = key;
+    size++;
+}
+
+void end_insert(int num[], int &size, int key)
+{
+    num[size] = key;
+    size++;
+}
+
+void middle_insert(int num[], int &size, int key)
+{
+    int q;
+    cout << "Enter Position to Insert - Place: ";
+    cin >> q;
+
+    if (q >= 1 && q <= size + 1)
+    {
+        for (int i = size; i > q - 1; i--)
+        {
+            num[i] = num[i - 1];
+        }
+        num[q - 1] = key;
+        size++;
+    }
+    else
+    {
+        cout << "Invalid position to insert!" << endl;
+    }
+}
+
+// Deletion functions (same as provided earlier)
+void start_delete(int num[], int &size)
+{
+    for (int i = 0; i < size - 1; i++)
+    {
+        num[i] = num[i + 1];
+    }
+    size--;
+}
+
+void middle_delete(int num[], int &size)
+{
+    int q;
+    cout << "Enter the position to delete: ";
+    cin >> q;
+
+    if (q >= 1 && q <= size)
+    {
+        for (int i = q - 1; i < size - 1; i++)
+        {
+            num[i] = num[i + 1];
+        }
+        size--;
+    }
+    else
+    {
+        cout << "Invalid position for deletion!" << endl;
+    }
+}
+
+void end_delete(int num[], int &size)
+{
+    size--;
+}
