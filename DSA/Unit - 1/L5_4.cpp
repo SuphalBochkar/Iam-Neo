@@ -47,6 +47,17 @@ int lastOcc(vector<int> &arr, int n, int k)
     return rightOcc;
 }
 
+int noOfOccurrences(vector<int> &arr, int n, int k)
+{
+    int f = firstOcc(arr, n, k);
+    int l = lastOcc(arr, n, k);
+
+    if (f == -1 || l == -1)
+        return 0;
+
+    return l - f + 1;
+}
+
 int main()
 {
     int n;
