@@ -23,6 +23,30 @@ int firstOcc(vector<int> &arr, int n, int k)
     }
     return leftOcc;
 }
+
+int lastOcc(vector<int> &arr, int n, int k)
+{
+    int s = 0, e = n - 1, rightOcc = -1;
+    while (s <= e)
+    {
+        int mid = s + (e - s) / 2;
+        if (arr[mid] == k)
+        {
+            rightOcc = mid;
+            s = mid + 1;
+        }
+        else if (k < arr[mid])
+        {
+            e = mid - 1;
+        }
+        else
+        {
+            s = mid + 1;
+        }
+    }
+    return rightOcc;
+}
+
 int main()
 {
     int n;
