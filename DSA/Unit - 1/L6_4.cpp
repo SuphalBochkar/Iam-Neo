@@ -1,6 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+void findKth(vector<int> &arr, int n, int k)
+{
+    for (int i = 0; i < n - 1; i++)
+    {
+        int mini = i;
+        for (int j = i + 1; j < n; j++)
+        {
+            if (arr[mini] > arr[j])
+            {
+                mini = j;
+            }
+        }
+        if (mini != i)
+        {
+            swap(arr[mini], arr[i]);
+        }
+    }
+}
+
 int main()
 {
 
