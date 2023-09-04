@@ -68,6 +68,38 @@ public:
         this->album = album;
     }
 
+    // Class functions
+    void Play(int numPlays)
+    {
+        for (int i = 0; i < numPlays; i++)
+        {
+            UpdatePlayCount();
+            UpdateMoneyEarned();
+        }
+    }
+
+    void Stats()
+    {
+        cout << GetArtist() << endl;
+        cout << GetTitle() << endl;
+        cout << GetAlbum() << endl;
+        cout << GetPlayCount() << endl;
+        cout << fixed << setprecision(3) << GetPayRate() << endl;
+        cout << GetMoneyEarned() << endl;
+    }
+
+private:
+    void UpdatePlayCount()
+    {
+        play_count++;
+    }
+
+    void UpdateMoneyEarned()
+    {
+        money_earned = play_count * pay_rate;
+    }
+};
+
 int main()
 {
 
