@@ -26,6 +26,38 @@ int main()
     int maxTotal = -1;
     int maxRoll = -1;
 
+    for (int i = 0; i < n; i++)
+    {
+        cin >> st[i].rollNo >> st[i].ma1 >> st[i].ma2 >> st[i].ma3;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        int total = st[i].ma1 + st[i].ma2 + st[i].ma3;
+        cout << total << endl;
+
+        if (maxA < st[i].ma1)
+        {
+            maxA = st[i].ma1;
+            rollA = st[i].rollNo;
+        }
+        if (maxB < st[i].ma2)
+        {
+            maxB = st[i].ma2;
+            rollB = st[i].rollNo;
+        }
+        if (maxC < st[i].ma3)
+        {
+            maxC = st[i].ma3;
+            rollC = st[i].rollNo;
+        }
+        if (maxTotal < total)
+        {
+            maxTotal = total;
+            maxRoll = st[i].rollNo;
+        }
+    }
+
     cout << endl;
     cout << rollA << " " << maxA << endl;
     cout << rollB << " " << maxB << endl;
