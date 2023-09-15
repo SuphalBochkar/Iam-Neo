@@ -105,3 +105,50 @@
 //     return 0;
 // }
 
+#include <bits/stdc++.h>
+using namespace std;
+
+class MusicLibrary
+{
+public:
+    MusicLibrary() {}
+
+    void addSong(const string &song, const string &artist)
+    {
+        songs.push_back(make_pair(artist, song));
+    }
+
+    void displaySortedLibrary()
+    {
+        sort(songs.begin(), songs.end());
+        for (const auto &entry : songs)
+        {
+            cout << entry.second << " - " << entry.first << endl;
+        }
+    }
+
+private:
+    vector<pair<string, string>> songs;
+};
+
+int main()
+{
+    int N;
+    cin >> N;
+
+    MusicLibrary library;
+
+    cin.ignore();
+
+    for (int i = 0; i < N; i++)
+    {
+        string song, artist;
+        getline(cin, song);
+        getline(cin, artist);
+        library.addSong(song, artist);
+    }
+
+    library.displaySortedLibrary();
+
+    return 0;
+}
