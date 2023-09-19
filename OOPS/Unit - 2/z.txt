@@ -1,0 +1,4 @@
+cout << "The first string before swapping is : " << sen1  <<endl;
+cout << "The second string before swapping is : " << sen2  <<endl;
+cout << "The first string after swapping is: " << sen2  <<endl;
+cout << "The second string after swapping is: " << sen1  <<endl;
