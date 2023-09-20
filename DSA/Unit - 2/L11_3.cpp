@@ -57,6 +57,54 @@ void addNode(node *&list, int val)
         ptr->next = n;
     }
 }
+
+// Shift Right
+void shift(node *&list, int sh)
+{
+    int len = length(list);
+    if (len == 0 || sh % len == 0)
+        return;
+
+    // node *ptr = list;
+    // int length = 1;
+
+    // while (ptr->next != nullptr)
+    // {
+    //     ptr = ptr->next;
+    //     length++;
+    // }
+
+    // node *mid = list;
+    // for (int i = 1; i < length - sh; i++)
+    // {
+    //     mid = mid->next;
+    // }
+
+    // ptr->next = list;
+    // list = mid->next;
+    // mid->next = nullptr;
+
+    sh = sh % len;
+    node *current = list;
+    node *newTail = list;
+
+    for (int i = 0; i < len - sh; i++)
+    {
+        current = current->next;
+    }
+
+    node *newHead = current->next;
+    current->next = nullptr;
+
+    while (newHead->next != nullptr)
+    {
+        newHead = newHead->next;
+    }
+
+    newHead->next = list;
+    list = newTail->next;
+}
+
 void display(node *list)
 {
     for (node *ptr = list; ptr != nullptr; ptr = ptr->next)
