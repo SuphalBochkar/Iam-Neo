@@ -8,6 +8,31 @@ struct Seat
     Seat *next;
 };
 
+// Create a new seat node
+Seat *createSeat(int seatNumber)
+{
+    Seat *newSeat = new Seat;
+    newSeat->seatNumber = seatNumber;
+    newSeat->next = nullptr;
+    return newSeat;
+}
+
+// Insert a new seat at the front of the list
+void insertFront(Seat *&head, int seatNumber)
+{
+    Seat *newSeat = createSeat(seatNumber);
+    if (!head)
+    {
+        head = newSeat;
+        head->next = head; // Circular reference
+    }
+    else
+    {
+        newSeat->next = head->next;
+        head->next = newSeat;
+    }
+}
+
 int main()
 {
     int n, middleSeat, position, seat;
