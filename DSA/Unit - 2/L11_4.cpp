@@ -9,6 +9,37 @@ struct node
 };
 void addNode(node *&list, int val);
 void display(node *list);
+
+int main()
+{
+    node *even = nullptr;
+    node *odd = nullptr;
+
+    int n;
+    cin >> n;
+
+    for (int i = 0; i < n; i++)
+    {
+        int a;
+        cin >> a;
+
+        if (a % 2 == 0)
+        {
+            addNode(even, a);
+        }
+        else
+        {
+            addNode(odd, a);
+        }
+    }
+
+    cout << "Even List: ";
+    display(even);
+
+    cout << "\nOdd List: ";
+    display(odd);
+}
+
 void addNode(node *&list, int val)
 {
     node *n = new node(val);
