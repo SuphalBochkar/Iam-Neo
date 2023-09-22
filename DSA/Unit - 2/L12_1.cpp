@@ -8,6 +8,38 @@ struct Node
     Node *next;
 };
 
+void insert(Node **head, int data)
+{
+    Node *newNode = new Node();
+    newNode->data = data;
+    if (*head == NULL)
+    {
+        *head = newNode;
+        newNode->next = *head;
+    }
+    else
+    {
+        Node *temp = *head;
+        while (temp->next != *head)
+            temp = temp->next;
+        temp->next = newNode;
+        newNode->next = *head;
+    }
+}
+
+void printList(Node *head)
+{
+    if (head == NULL)
+        return;
+    Node *temp = head;
+    do
+    {
+        cout << temp->data << " ";
+        temp = temp->next;
+    } while (temp != head);
+    cout << endl;
+}
+
 int main()
 {
     int testCases;
