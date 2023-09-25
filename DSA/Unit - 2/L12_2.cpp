@@ -33,6 +33,31 @@ void insertFront(Seat *&head, int seatNumber)
     }
 }
 
+// Insert a new seat at the middle of the list
+void insertMiddle(Seat *&head, int seatNumber)
+{
+    Seat *newSeat = createSeat(seatNumber);
+    if (!head)
+    {
+        head = newSeat;
+        head->next = head; // Circular reference
+    }
+    else
+    {
+        Seat *slow = head;
+        Seat *fast = head;
+
+        while (fast->next != head && fast->next->next != head)
+        {
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+
+        newSeat->next = slow->next;
+        slow->next = newSeat;
+    }
+}
+
 int main()
 {
     int n, middleSeat, position, seat;
