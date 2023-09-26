@@ -81,6 +81,29 @@ void insertAtPosition(Seat *&head, int position, int seatNumber)
     current->next = newSeat;
 }
 
+// Display the circular linked list
+void displayCircularList(Seat *head)
+{
+    if (!head)
+    {
+        cout << "List is empty." << endl;
+        return;
+    }
+
+    Seat *current = head;
+    int count = 0;
+
+    do
+    {
+        cout << "|" << current->seatNumber << "| --> ";
+        current = current->next;
+        count++;
+    } while (current != head);
+
+    cout << endl
+         << "No of nodes in the CLL is " << count - 1 << endl;
+}
+
 int main()
 {
     int n, middleSeat, position, seat;
