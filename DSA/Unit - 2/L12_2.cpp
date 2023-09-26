@@ -58,6 +58,29 @@ void insertMiddle(Seat *&head, int seatNumber)
     }
 }
 
+// Insert a new seat at a specified position in the list
+void insertAtPosition(Seat *&head, int position, int seatNumber)
+{
+    if (!head || position <= 0)
+    {
+        cout << "Invalid position." << endl;
+        return;
+    }
+
+    Seat *newSeat = createSeat(seatNumber);
+    Seat *current = head;
+    int currentPosition = 1;
+
+    while (currentPosition < position - 1)
+    {
+        current = current->next;
+        currentPosition++;
+    }
+
+    newSeat->next = current->next;
+    current->next = newSeat;
+}
+
 int main()
 {
     int n, middleSeat, position, seat;
