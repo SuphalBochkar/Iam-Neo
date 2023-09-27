@@ -98,3 +98,40 @@ void print(node *list)
     }
 }
 
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Node
+{
+    string name;
+    Node *next;
+
+    Node(const string &n) : name(n), next(nullptr) {}
+};
+
+int main()
+{
+    StudentRoster roster;
+    int n;
+    cin >> n;
+
+    for (int i = 0; i < n; i++)
+    {
+        string name;
+        cin >> name;
+        roster.insertNode(name, i + 1);
+    }
+
+    cout << "Current Linked List:" << endl;
+    roster.printList();
+
+    string newName;
+    int position;
+    cin >> newName >> position;
+    roster.insertNode(newName, position);
+
+    cout << "Updated Linked List:" << endl;
+    roster.printList();
+
+    return 0;
+}
