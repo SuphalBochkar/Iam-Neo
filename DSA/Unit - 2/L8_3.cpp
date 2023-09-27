@@ -109,6 +109,49 @@ struct Node
     Node(const string &n) : name(n), next(nullptr) {}
 };
 
+class StudentRoster
+{
+public:
+    Node *head;
+
+    StudentRoster() : head(nullptr) {}
+
+    void insertNode(const string &name, int position)
+    {
+        Node *newNode = new Node(name);
+        if (position == 1 || head == nullptr)
+        {
+            newNode->next = head;
+            head = newNode;
+        }
+        else
+        {
+            Node *current = head;
+            int currentPosition = 1;
+
+            while (currentPosition < position - 1 && current->next != nullptr)
+            {
+                current = current->next;
+                currentPosition++;
+            }
+
+            newNode->next = current->next;
+            current->next = newNode;
+        }
+    }
+
+    void printList()
+    {
+        Node *current = head;
+        while (current != nullptr)
+        {
+            cout << current->name << " ";
+            current = current->next;
+        }
+        cout << endl;
+    }
+};
+
 int main()
 {
     StudentRoster roster;
