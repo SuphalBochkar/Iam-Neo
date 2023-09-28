@@ -36,3 +36,28 @@ int main()
 
     return 0;
 }
+
+void addFirst(node *&list, int key)
+{
+    node *n = new node;
+    n->data = key;
+    n->next = nullptr;
+
+    if (list == nullptr)
+    {
+        list = n;
+    }
+    else
+    {
+        n->next = list;
+        list = n;
+    }
+}
+
+void display(node *list)
+{
+    for (node *ptr = list; ptr != nullptr; ptr = ptr->next)
+    {
+        cout << ptr->data << " ";
+    }
+}
