@@ -1,0 +1,1 @@
+{"name":"Local: L22_2","url":"a:\\3 GitHub Desk\\2 Iam Neo\\DSA\\Unit - 4\\L22_2.cpp","tests":[{"id":1696856515995,"input":"2\n15 5\n100 5","output":"759375\n10000000000"},{"id":1696856522677,"input":"1\n7 5","output":"16807"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"a:\\3 GitHub Desk\\2 Iam Neo\\DSA\\Unit - 4\\L22_2.cpp","group":"local","local":true}

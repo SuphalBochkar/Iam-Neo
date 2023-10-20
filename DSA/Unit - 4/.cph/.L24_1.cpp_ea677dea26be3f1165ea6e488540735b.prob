@@ -1,0 +1,1 @@
+{"name":"Local: L24_1","url":"a:\\3 GitHub Desk\\2 Iam Neo\\DSA\\Unit - 4\\L24_1.cpp","tests":[{"id":1696878151816,"input":"5\nq w e r t","output":"w t r q e "},{"id":1696878161621,"input":"5\nm a n g o","output":"o n m g a"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"a:\\3 GitHub Desk\\2 Iam Neo\\DSA\\Unit - 4\\L24_1.cpp","group":"local","local":true}

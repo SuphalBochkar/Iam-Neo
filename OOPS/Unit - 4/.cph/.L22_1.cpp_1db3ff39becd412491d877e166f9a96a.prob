@@ -1,0 +1,1 @@
+{"name":"Local: L22_1","url":"a:\\3 GitHub Desk\\2 Iam Neo\\OOPS\\Unit - 4\\L22_1.cpp","tests":[{"id":1697082778943,"input":"25.5","output":"77.9°F\n-108.2°F"},{"id":1697082789876,"input":"-25.5","output":"-13.9°F\n57.0°F"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"a:\\3 GitHub Desk\\2 Iam Neo\\OOPS\\Unit - 4\\L22_1.cpp","group":"local","local":true}
