@@ -13,7 +13,6 @@ public:
             ans = true;
         else
             ans = false;
-
         if (ans)
             cout << "Rectangle 1 and Rectangle 2 are equal in size." << endl;
         else

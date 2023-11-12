@@ -3,7 +3,6 @@ using namespace std;
 
 int main()
 {
-
     long long binary;
     int decimal = 0, base = 1, remain;
     cin >> binary;

@@ -1,39 +1,39 @@
-// #include <bits/stdc++.h>
-// using namespace std;
+#include <bits/stdc++.h>
+using namespace std;
 
-// class WeatherData
-// {
-// private:
-//     double t;
+class WeatherData
+{
+private:
+    double t;
 
-// public:
-//     WeatherData(double val) : t(val) {}
+public:
+    WeatherData(double val) : t(val) {}
 
-//     void operator+()
-//     {
-//         double ans = (t * 9.0 / 5.0 + 32) * 10 / 10;
-//         cout << ans << "°F" << endl;
-//     }
+    void operator+()
+    {
+        double ans = (t * 9.0 / 5.0 + 32) * 10 / 10;
+        cout << ans << "°F" << endl;
+    }
 
-//     void operator-()
-//     {
-//         double ans = (t * 9.0 / 5.0 + 32) * 10 / 10;
-//         cout << ans << "°F" << endl;
-//     }
-// };
+    void operator-()
+    {
+        double ans = (t * 9.0 / 5.0 + 32) * 10 / 10;
+        cout << ans << "°F" << endl;
+    }
+};
 
-// int main()
-// {
-//     double a;
-//     cin >> a;
+int main()
+{
+    double a;
+    cin >> a;
 
-//     WeatherData w(a);
+    WeatherData w(a);
 
-//     +w;
-//     -w;
+    +w;
+    -w;
 
-//     return 0;
-// }
+    return 0;
+}
 
 #include <bits/stdc++.h>
 using namespace std;

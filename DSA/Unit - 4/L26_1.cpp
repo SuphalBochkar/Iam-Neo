@@ -13,16 +13,19 @@ struct Node *newNode(int data)
 {
     return new Node(data);
 }
+
 void NthInorder(struct Node *node, int &n)
 {
     if (node == nullptr)
         return;
+
     NthInorder(node->left, n);
     if (--n == 0)
     {
-        cout << node->data << endl;
+        cout << node->data;
         return;
     }
+
     NthInorder(node->right, n);
 }
 

@@ -1,0 +1,1 @@
+{"name":"Local: L27_1","url":"a:\\3 GitHub Desk\\2 Iam Neo\\DSA\\Unit - 4\\L27_1.cpp","tests":[{"id":1697825260814,"input":"8\n1 2 3 5 8 10 7 9","output":"Post-order traversal: 7 9 10 8 5 3 2 1 \nSum of all nodes: 45"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"a:\\3 GitHub Desk\\2 Iam Neo\\DSA\\Unit - 4\\L27_1.cpp","group":"local","local":true}
